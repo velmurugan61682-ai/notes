@@ -1,0 +1,28 @@
+1.what is diffing?
+diffing means finding the difference between two things.
+ in React, diffing is the process of comparing the old Virtual DOM with the new Virtual DOM to see what changed.
+ Only the changed parts will update in the browser.
+
+2.what is reconciliation?
+reconciliation is the overall process React uses to update the UI.
+Steps:
+State or props change
+react creates a new Virtual DOM
+react does diffing (finds change)
+react updates only the changed element in the real DOM
+diffing happens inside reconciliation.
+3.what is React?
+react is a JavaScript library used to build user interfaces for websites.
+component-based
+fast because of Virtual DOM
+reusable UI parts
+created by facebook
+4.what is a transpiler?
+a transpiler converts code from one version of a language to another. Example:
+babel converts ES6=ES5
+JSX=JavaScript
+5.what is a Compiler?
+A compiler converts code from one language to another completely different language. Example:
+C=Machine code
+java=bytecode
+typeScript =javaScript

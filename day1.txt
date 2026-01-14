@@ -1,0 +1,102 @@
+1,what is diffence between var,let and const
+answer:var is function scope and allow the redeclaration 
+let is {block scope} and allow  reassignment  but not redeclaration
+const is {block scope} and cannot be reassignment
+2,what is hoisting ?give example
+answer:
+hoisting
+      *hoisting is javascript behavior of moving variable and function declaration to the top of their scope before execution
+      example:
+      var a;          
+      console.log(a); its undefined
+      a=10;         
+3, what is temporal dead zone?
+answer:means a let/const variable exists but cannot be used until its declaration line is reached.
+
+4, can you reassign  a const object s property?
+answer:
+ no const variable cannot be reassign
+ 
+ data types:
+ 1,what are primitive and non- primitive data type?
+ answer:
+ primitive
+ let a = 10; Number
+let b = "Hello";String
+let c = true; Boolean
+let d = null;Null
+let e; Undefined
+non-primitive
+array
+object
+function
+2 what are between undefined and null?
+answer:
+undefined: value not assigned
+let a;
+console.log(a);
+null:empty value
+let b=null;
+console.log(b);
+3 what does typeofnull return  and why?
+typeof null returns object because of an old JavaScript bug that was never fixed
+4 what are different between == and ===?
+answer:
+==checks only value, while===checks both value and type
+array
+1,how to you add an element  to the end of an array?
+answer:
+array.push(a) //element 
+2,what is the difference between push() and splice()?
+answer:
+push()add items only at the end of an array
+splice()can add,remove, or replace items at any position in the array
+3,what is the difference between slice() and splice()?
+answer:
+slice()returns a copy of part of the array 
+splice()adds removes items in the array 
+4, how do you remove the last element from an array?
+answer:
+array.pop();
+object:
+1,what are two ways to access object properities?
+answer:
+object.property
+object["property"]
+2,how do you add a new property to an objects?
+answer:
+const user = {};
+user.name = "Vel"; 
+const user = {};
+user["age"] = 21;    
+3, how do you loop through object properties?
+answer:
+const car = {
+  brand: "BMW",
+  model: "X5",
+  year: 2024
+};
+for (let key in car) {
+  console.log(key, car[key]);
+}
+4, what is the difference between object .key() and object:value()?
+const user = {
+  name: "Vel",
+  age: 21
+};
+console.log(Object.keys(user));  
+console.log(Object.values(user));
+
+
+
+
+
+
+
+
+
+
+
+
+
+

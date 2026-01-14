@@ -1,0 +1,454 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Directors & Movies</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .director {
+      margin-bottom: 20px;
+    }
+    .director h2 {
+      margin: 0;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Directors & Movies</h1>
+
+  <div id="output"></div>
+
+  <script>
+    const data = [
+      {
+        director: "Christopher Nolan",
+        movies: [
+          { name: "Inception" },
+          { name: "Interstellar" },
+          { name: "The Dark Knight" }
+        ]
+      },
+      {
+        director: "James Cameron",
+        movies: [
+          { name: "Avatar" },
+          { name: "Titanic" },
+          { name: "Terminator 2" }
+        ]
+      },
+      {
+        director: "Rajamouli",
+        movies: [
+          { name: "RRR" },
+          { name: "Baahubali 1" },
+          { name: "Baahubali 2" }
+        ]
+      }
+    ];
+
+
+    const output = document.getElementById("output");
+
+    data.forEach(item => {
+      const div = document.createElement("div");
+      div.className = "director";
+
+      div.innerHTML = `
+        <h2>${item.director}</h2>
+        <ul>
+          ${item.movies.map(movie => `<li>${movie.name}</li>`).join("")}
+        </ul>
+      `;
+
+      output.appendChild(div);
+    });
+
+    console.log(data[1].movies[2].name); 
+  </script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Interview Notes</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #222;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    .box {
+      margin-bottom: 30px;
+      padding: 15px;
+      border-left: 4px solid #333;
+      background: #fafafa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Interview Questions & Answers</h1>
+
+  <div class="box">
+    <h2>1. Difference between var, let and const</h2>
+    <p><b>var</b> → function scope and allows redeclaration</p>
+    <p><b>let</b> → block scope and allows reassignment but not redeclaration</p>
+    <p><b>const</b> → block scope and cannot be reassigned</p>
+  </div>
+
+  <div class="box">
+    <h2>2. What is Hoisting? Give example</h2>
+    <p>Hoisting is JavaScript behavior of moving variable and function declarations to the top of their scope before execution.</p>
+    <pre>
+var a;
+console.log(a); // undefined
+a = 10;
+    </pre>
+  </div>
+
+  <div class="box">
+    <h2>3. What is Temporal Dead Zone (TDZ)?</h2>
+    <p>TDZ means a let/const variable exists but cannot be used until its actual declaration line is reached.</p>
+  </div>
+
+  <div class="box">
+    <h2>4. Can you reassign a const object's property?</h2>
+    <p>No, the const variable itself cannot be reassigned.</p>
+  </div>
+
+  <h1>Data Types</h1>
+
+  <div class="box">
+    <h2>1. What are primitive and non-primitive data types?</h2>
+    <p><b>Primitive:</b></p>
+    <pre>
+let a = 10;        // Number
+let b = "Hello";   // String
+let c = true;      // Boolean
+let d = null;      // Null
+let e;             // Undefined
+    </pre>
+
+    <p><b>Non-primitive:</b> Array, Object, Function</p>
+  </div>
+
+  <div class="box">
+    <h2>2. Difference between undefined and null?</h2>
+    <p><b>undefined</b>: value not assigned</p>
+    <pre>
+let a;
+console.log(a);
+    </pre>
+
+    <p><b>null</b>: empty value</p>
+    <pre>
+let b = null;
+console.log(b);
+    </pre>
+  </div>
+
+  <div class="box">
+    <h2>3. What does typeof null return and why?</h2>
+    <p><b>typeof null</b> returns <b>"object"</b> because of an old JavaScript bug.</p>
+  </div>
+
+  <div class="box">
+    <h2>4. Difference between == and === ?</h2>
+    <p><b>==</b> → checks value only</p>
+    <p><b>===</b> → checks value + type</p>
+  </div>
+
+  <h1>Array Questions</h1>
+
+  <div class="box">
+    <h2>1. How do you add an element to the end of an array?</h2>
+    <pre>array.push(a)</pre>
+  </div>
+
+  <div class="box">
+    <h2>2. Difference between push() and splice()?</h2>
+    <p><b>push()</b> → adds items only at the end</p>
+    <p><b>splice()</b> → can add, remove, replace items anywhere</p>
+  </div>
+
+  <div class="box">
+    <h2>3. Difference between slice() and splice()?</h2>
+    <p><b>slice()</b> → returns a copy of part of the array (does NOT modify original)</p>
+    <p><b>splice()</b> → modifies the actual array</p>
+  </div>
+
+  <div class="box">
+    <h2>4. How to remove the last element from an array?</h2>
+    <pre>array.pop();</pre>
+  </div>
+
+  <h1>Object Questions</h1>
+
+  <div class="box">
+    <h2>1. Two ways to access object properties?</h2>
+    <pre>
+object.property
+object["property"]
+    </pre>
+  </div>
+
+  <div class="box">
+    <h2>2. How to add a new property to an object?</h2>
+    <pre>
+const user = {};
+user.name = "Vel";
+
+const user = {};
+user["age"] = 21;
+    </pre>
+  </div>
+
+  <div class="box">
+    <h2>3. How do you loop through object properties?</h2>
+    <pre>
+const car = {
+  brand: "BMW",
+  model: "X5",
+  year: 2024
+};
+
+for (let key in car) {
+  console.log(key, car[key]);
+}
+    </pre>
+  </div>
+
+  <div class="box">
+    <h2>4. Difference between Object.keys() and Object.values()?</h2>
+    <pre>
+const user = {
+  name: "Vel",
+  age: 21
+};
+
+console.log(Object.keys(user));   // ["name", "age"]
+console.log(Object.values(user)); // ["Vel", 21]
+    </pre>
+  </div>
+
+</body>
+</html>
+ -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Practice</title>
+
+  <style>
+      body {
+          font-family: Arial, sans-serif;
+          padding: 20px;
+          background: #f7f7f7;
+      }
+      h1 {
+          color: #222;
+      }
+      pre {
+          background: #eee;
+          padding: 15px;
+          border-radius: 5px;
+          overflow-x: auto;
+      }
+  </style>
+
+</head>
+<body>
+
+  <h1>JavaScript Output (Check Console)</h1>
+  <p>Open Developer Tools → Console to see the output.</p>
+
+  <script>
+    // 4) Print 0 5 10 15 20 25 using FOR loop
+    console.log("FOR LOOP:");
+    for (let i = 0; i <= 25; i++) {
+      if (i % 5 === 0) {
+        console.log(i);
+      }
+    }
+
+
+    // Print using WHILE loop
+    console.log("WHILE LOOP:");
+    let i = 0;
+    while (i <= 25) {
+      if (i % 5 === 0) {
+        console.log(i);
+      }
+      i++;
+    }
+
+
+    // Print using DO WHILE loop
+    console.log("DO WHILE LOOP:");
+    let k = 0;
+    do {
+      if (k % 5 === 0) {
+        console.log(k);
+      }
+      k++;
+    } while (k <= 25);
+
+
+
+    // 5) Print 1+2+3+4 using FOR loop
+    function fact2() {
+      console.log("Series using FOR:");
+      let t = "";
+      for (let i = 1; i <= 4; i++) {
+        t += i;
+        if (i < 4) t += " + ";
+      }
+      console.log(t);
+    }
+    fact2();
+
+
+    // Using WHILE loop
+    function fact3() {
+      console.log("Series using WHILE:");
+      let t = "";
+      let j = 1;
+
+      while (j <= 4) {
+        t += j;
+        if (j < 4) t += " + ";
+        j++;
+      }
+      return t;
+    }
+
+    console.log(fact3());
+
+
+    // Using DO WHILE loop
+    function fact1() {
+      console.log("Series using DO-WHILE:");
+      let t = "";
+      let k = 1;
+
+      do {
+        t += k;
+        if (k < 4) t += " + ";
+        k++;
+      } while (k <= 4);
+
+      console.log(t);
+    }
+
+    fact1();
+
+
+
+    // 6) Even numbers 0 + 2 + 4 + 6
+
+    console.log("Even numbers FOR:");
+    let t1 = "";
+    for (let i = 0; i <= 6; i++) {
+      if (i % 2 === 0) {
+        t1 += i + " + ";
+      }
+    }
+    console.log(t1);
+
+
+    console.log("Even numbers WHILE:");
+    let t2 = "";
+    let j2 = 0;
+
+    while (j2 <= 6) {
+      if (j2 % 2 === 0) t2 += j2 + " + ";
+      j2++;
+    }
+    console.log(t2);
+
+
+    console.log("Even numbers DO WHILE:");
+    let t3 = "";
+    let k3 = 0;
+
+    do {
+      if (k3 % 2 === 0) t3 += k3 + " + ";
+      k3++;
+    } while (k3 <= 6);
+
+    console.log(t3);
+
+
+    // Lexical Scope Example
+    console.log("Lexical Scope Example:");
+    function outer() {
+      let a = 10;
+      function inner() {
+        console.log(a);
+      }
+      inner();
+    }
+    outer();
+
+
+    // Closure Example
+    console.log("Closure Example:");
+    function outer2() {
+      let a = 10;
+
+      return function inner() {
+        console.log(a);
+      }
+    }
+
+    let fun = outer2();
+    fun();
+
+
+    // Private variable using closure
+    console.log("Bank Account Example:");
+    const createAcc = () => {
+      let balance = 1000; // private variable
+
+      const deposit = (amount) => {
+        balance += amount;
+        console.log("Balance:", balance);
+      }
+
+      const withdraw = (amount) => {
+        balance -= amount;
+        console.log("Balance:", balance);
+      };
+
+      return { deposit, withdraw };
+    };
+
+    const acc = createAcc();
+    acc.deposit(500);
+    acc.withdraw(300);
+    acc.deposit(100);
+  </script>
+
+</body>
+</html>
+ -->
