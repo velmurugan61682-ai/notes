@@ -1,1 +1,43 @@
 day 36 node.js
+1,What is the fs module in Node.js?
+answer:fs file allows the node.js and managesfiles and directories and the server
+examples:create folder and update file and delete reactfile and write file
+2,Why is fs considered a core (built-in) module?
+It is bundles and node.js  no installing and needed and work and director os file system
+3,How do you import fs using ES Modules?
+import fs from "fs";
+import { readFile } from "fs/promises";
+4,Difference between fs and fs/promises
+fs
+callback or sync based it is old method and callback event loop
+fs promises
+non blocking 
+it async and await promises based
+fs
+import { readFile } from "fs/promises";
+const data = await readFile("file.txt", "utf-8");
+5, Why are async file operations preferred?
+they don't block is events loop
+server better handle the multiple user
+better performance and scalablity
+6,What happens if fs.readFileSync() is used in a server request?
+blocking events loop and   other request wait and server becomes slow and or frozen
+7How does fs interact with the Node.js event loop?
+async and fs operation and library thread and pool
+once complete and callback push the event loop
+events loop continoues handling request
+8 Can fs be used inside a browser?
+because 
+broserwer don t access direct file access
+security reasons
+file depends and on os features 
+browers using a
+file api
+localstorege
+9What type of data does fs.readFile() return by default?
+fs.readFile("file.txt", (err, data) => {
+  console.log(data); // Buffer
+});
+fs.readFile("file.txt", "utf-8", callback);
+10 When would you choose file storage instead of a database?
+Use file storage when data is small, simple, mostly read-only, and does not require searching, relationships, or concurrent access. Use a database otherwise. 
