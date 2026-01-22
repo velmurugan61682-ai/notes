@@ -1,0 +1,23 @@
+express
+1.Express what it is
+Express.js is a Node.js framework used to build web servers and APIs easily.
+routes(url)
+request and response
+api get put push and delete
+2. Why Express?
+simple and lightweight
+faster development
+ easy routing
+3. Node.js vs Express.js (Difference)
+Node.js
+javaScript runtime
+runs JS outside browser
+low-level
+harder router
+node-engine
+express
+framework on top of node
+simplifies server creation
+high level
+easy routing
+express  Car body
